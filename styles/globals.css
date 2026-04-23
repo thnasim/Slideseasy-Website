@@ -1,19 +1,18 @@
-/* ===== GLOBAL STYLES ===== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --black: #0a0a0a;
-  --black-soft: #111111;
-  --black-card: #161616;
-  --black-border: #222222;
+  --bg: #ffffff;
+  --bg-soft: #f8f8f8;
+  --bg-card: #f4f4f4;
+  --border: #e8e8e8;
+  --border-dark: #d0d0d0;
   --orange: #FF4122;
   --orange-hover: #e03519;
+  --black: #0a0a0a;
+  --text: #111111;
+  --text-soft: #555555;
+  --text-muted: #888888;
   --white: #ffffff;
-  --white-80: rgba(255,255,255,0.8);
-  --white-50: rgba(255,255,255,0.5);
-  --white-20: rgba(255,255,255,0.2);
-  --white-10: rgba(255,255,255,0.1);
-  --white-05: rgba(255,255,255,0.05);
   --font: 'Inter', sans-serif;
   --radius: 12px;
   --radius-lg: 20px;
@@ -21,232 +20,43 @@
   --max-width: 1200px;
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
 body {
   font-family: var(--font);
-  background-color: var(--black);
-  color: var(--white);
+  background-color: var(--bg);
+  color: var(--text);
   font-size: 18px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; height: auto; display: block; }
+button { font-family: var(--font); cursor: pointer; border: none; outline: none; }
+input, textarea, select { font-family: var(--font); font-size: 18px; }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+.section { padding: 100px 0; }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-button {
-  font-family: var(--font);
-  cursor: pointer;
-  border: none;
-  outline: none;
-}
-
-input, textarea, select {
-  font-family: var(--font);
-  font-size: 18px;
-}
-
-.container {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-.section {
-  padding: 100px 0;
-}
-
-.section-sm {
-  padding: 60px 0;
-}
-
-/* ===== BUTTONS ===== */
 .btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background-color: var(--orange);
-  color: var(--white);
-  font-size: 16px;
-  font-weight: 600;
-  padding: 14px 28px;
+  display: inline-flex; align-items: center; gap: 8px;
+  background-color: var(--orange); color: var(--white);
+  font-size: 16px; font-weight: 600; padding: 14px 28px;
   border-radius: var(--radius);
   transition: background-color var(--transition), transform var(--transition);
-  letter-spacing: -0.01em;
 }
+.btn-primary:hover { background-color: var(--orange-hover); transform: translateY(-1px); }
 
-.btn-primary:hover {
-  background-color: var(--orange-hover);
-  transform: translateY(-1px);
-}
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border-dark); border-radius: 3px; }
 
-.btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background-color: transparent;
-  color: var(--white);
-  font-size: 16px;
-  font-weight: 500;
-  padding: 13px 27px;
-  border-radius: var(--radius);
-  border: 1px solid var(--white-20);
-  transition: border-color var(--transition), background-color var(--transition);
-}
-
-.btn-secondary:hover {
-  border-color: var(--white-50);
-  background-color: var(--white-05);
-}
-
-.btn-outline-orange {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background-color: transparent;
-  color: var(--orange);
-  font-size: 16px;
-  font-weight: 600;
-  padding: 13px 27px;
-  border-radius: var(--radius);
-  border: 1px solid var(--orange);
-  transition: background-color var(--transition), color var(--transition);
-}
-
-.btn-outline-orange:hover {
-  background-color: var(--orange);
-  color: var(--white);
-}
-
-/* ===== TYPOGRAPHY ===== */
-.section-label {
-  display: inline-block;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--orange);
-  margin-bottom: 16px;
-}
-
-.section-title {
-  font-size: clamp(32px, 5vw, 52px);
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-  color: var(--white);
-  margin-bottom: 20px;
-}
-
-.section-subtitle {
-  font-size: 18px;
-  color: var(--white-50);
-  line-height: 1.7;
-  max-width: 560px;
-}
-
-/* ===== DIVIDER ===== */
-.divider {
-  border: none;
-  border-top: 1px solid var(--black-border);
-}
-
-/* ===== CARD ===== */
-.card {
-  background-color: var(--black-card);
-  border: 1px solid var(--black-border);
-  border-radius: var(--radius-lg);
-  padding: 40px;
-  transition: border-color var(--transition);
-}
-
-.card:hover {
-  border-color: var(--white-20);
-}
-
-/* ===== ORANGE ACCENT ===== */
-.text-orange {
-  color: var(--orange);
-}
-
-/* ===== SCROLL BAR ===== */
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--black);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--black-border);
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--white-20);
-}
-
-/* ===== ANIMATIONS ===== */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
-
-@keyframes marqueeReverse {
-  0% { transform: translateX(-50%); }
-  100% { transform: translateX(0); }
-}
-
-.animate-fade-up {
-  animation: fadeInUp 0.6s ease forwards;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .section {
-    padding: 70px 0;
-  }
-
-  .section-title {
-    font-size: clamp(28px, 8vw, 40px);
-  }
-
-  .section-subtitle {
-    font-size: 16px;
-  }
-}
+@media (max-width: 768px) { .section { padding: 70px 0; } }
