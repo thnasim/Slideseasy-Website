@@ -1,0 +1,207 @@
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.label {
+  display: inline-block; font-size: 12px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase; color: #FF4122; margin-bottom: 16px;
+}
+.sectionTitle {
+  font-size: clamp(28px, 4vw, 46px); font-weight: 800;
+  line-height: 1.1; letter-spacing: -0.03em; color: #111; margin-bottom: 56px;
+}
+.sectionHead { margin-bottom: 56px; }
+
+/* HERO */
+.hero { padding: 150px 24px 80px; max-width: 1200px; margin: 0 auto; }
+.heroInner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.heroIconWrap { width: 52px; height: 52px; margin-bottom: 20px; }
+.heroIcon { width: 52px; height: 52px; object-fit: contain; }
+.heroContent { display: flex; flex-direction: column; }
+.heroTitle {
+  font-size: clamp(34px, 5vw, 58px); font-weight: 900;
+  line-height: 1.05; letter-spacing: -0.04em; color: #111; margin-bottom: 20px;
+}
+.heroDesc { font-size: 18px; color: #666; line-height: 1.7; margin-bottom: 36px; }
+.heroCta { display: flex; gap: 16px; flex-wrap: wrap; }
+.btn {
+  display: inline-flex; align-items: center;
+  background-color: #FF4122; color: #fff;
+  font-size: 16px; font-weight: 700; padding: 15px 28px;
+  border-radius: 12px; transition: background-color 0.2s ease;
+}
+.btn:hover { background-color: #e03519; }
+.btnAlt {
+  display: inline-flex; align-items: center;
+  background-color: transparent; color: #444;
+  font-size: 16px; font-weight: 600; padding: 14px 27px;
+  border-radius: 12px; border: 1px solid #ddd;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+.btnAlt:hover { border-color: #aaa; background-color: #f8f8f8; }
+.heroImage { display: flex; justify-content: flex-end; }
+.heroImageBox {
+  width: 100%; border-radius: 20px; overflow: hidden;
+  border: 1px solid #e8e8e8; aspect-ratio: 4/3;
+  background-color: #f5f5f5; box-shadow: 0 16px 48px rgba(0,0,0,0.08);
+}
+.heroImageBox img { width: 100%; height: 100%; object-fit: cover; }
+
+/* VIDEO */
+.videoSection { padding: 80px 0; max-width: 1200px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+.videoWrapper {
+  border-radius: 20px; overflow: hidden; border: 1px solid #e8e8e8;
+  aspect-ratio: 16/9; background-color: #f5f5f5;
+}
+.videoWrapper iframe { width: 100%; height: 100%; border: none; }
+.videoPlaceholder {
+  width: 100%; height: 100%; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 16px; color: #aaa; font-size: 15px;
+}
+.playBtn {
+  width: 64px; height: 64px; border-radius: 50%;
+  background-color: #fff4f2; border: 1px solid #ffd5cd;
+  display: flex; align-items: center; justify-content: center; color: #FF4122;
+}
+
+/* HOW WE DESIGN — ALTERNATING */
+.designSection {
+  padding: 80px 0; background: #fafafa;
+  border-top: 1px solid #ebebeb; border-bottom: 1px solid #ebebeb;
+}
+.designSection .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.designSteps { display: flex; flex-direction: column; gap: 80px; }
+.designRow { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+.designRowReverse { direction: rtl; }
+.designRowReverse > * { direction: ltr; }
+.designImage {
+  border-radius: 20px; overflow: hidden; border: 1px solid #e8e8e8;
+  aspect-ratio: 4/3; background: #f0f0f0;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.07);
+}
+.designImage img { width: 100%; height: 100%; object-fit: cover; }
+.designContent { display: flex; flex-direction: column; gap: 14px; }
+.designNum { font-size: 52px; font-weight: 900; color: #FF4122; opacity: 0.15; letter-spacing: -0.04em; line-height: 1; }
+.designTitle { font-size: clamp(22px, 3vw, 34px); font-weight: 800; letter-spacing: -0.03em; color: #111; }
+.designDesc { font-size: 17px; color: #666; line-height: 1.75; }
+
+/* BENEFITS GRID */
+.benefitsSection {
+  padding: 80px 0; background: #fff;
+  border-bottom: 1px solid #ebebeb;
+}
+.benefitsSection .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.benefitsGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.benefitCard {
+  background: #fafafa; border: 1px solid #ebebeb; border-radius: 20px;
+  padding: 40px 36px; transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+.benefitCard:hover { border-color: #FF4122; box-shadow: 0 8px 30px rgba(255,65,34,0.08); transform: translateY(-2px); }
+.benefitIconWrap {
+  width: 52px; height: 52px; border-radius: 14px;
+  background-color: #fff4f2; border: 1px solid #ffd5cd;
+  display: flex; align-items: center; justify-content: center; margin-bottom: 20px;
+}
+.benefitIcon { width: 28px; height: 28px; object-fit: contain; }
+.benefitTitle { font-size: 20px; font-weight: 700; letter-spacing: -0.02em; color: #111; margin-bottom: 10px; }
+.benefitDesc { font-size: 15px; color: #666; line-height: 1.7; }
+
+/* LOGOS */
+.logos { padding: 60px 0; border-bottom: 1px solid #ebebeb; background: #fff; }
+.logos .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.logosTitle { text-align: center; font-size: 15px; color: #888; margin-bottom: 36px; }
+.logosTitle strong { color: #444; }
+.logosGrid { display: grid; grid-template-columns: repeat(8,1fr); gap: 16px; align-items: center; }
+.logoItem {
+  height: 44px; display: flex; align-items: center; justify-content: center;
+  opacity: 0.4; filter: grayscale(1); background: #f8f8f8;
+  border-radius: 8px; padding: 8px;
+}
+.logoItem img { height: 22px; object-fit: contain; }
+
+/* HOW SECTION */
+.howSection { padding: 80px 0; background: #fafafa; border-top: 1px solid #ebebeb; border-bottom: 1px solid #ebebeb; }
+.howSection .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.stepsGrid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+.stepCard {
+  background: #fff; border: 1px solid #ebebeb; border-radius: 20px; padding: 36px 28px;
+  transition: border-color 0.2s ease;
+}
+.stepCard:hover { border-color: #FF4122; }
+.stepNum { font-size: 48px; font-weight: 900; color: #FF4122; opacity: 0.15; letter-spacing: -0.04em; display: block; margin-bottom: 16px; line-height: 1; }
+.stepTitle { font-size: 19px; font-weight: 700; color: #111; letter-spacing: -0.02em; margin-bottom: 10px; }
+.stepDesc { font-size: 15px; color: #666; line-height: 1.7; }
+
+/* PRICING */
+.pricingSection { padding: 80px 0; background: #fff; border-top: 1px solid #ebebeb; }
+.pricingSection .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.pricingWrap { max-width: 600px; display: flex; flex-direction: column; gap: 20px; }
+.pricingCard {
+  background: #fff; border: 2px solid #FF4122; border-radius: 24px;
+  padding: 44px 40px; position: relative; box-shadow: 0 12px 40px rgba(255,65,34,0.1);
+}
+.pricingBadge {
+  position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+  background-color: #FF4122; color: #fff; font-size: 11px; font-weight: 700;
+  padding: 5px 14px; border-radius: 100px; white-space: nowrap; letter-spacing: 0.06em; text-transform: uppercase;
+}
+.pricingPrice { display: flex; align-items: baseline; gap: 4px; margin-bottom: 8px; }
+.pricingCurrency { font-size: 24px; font-weight: 700; color: #FF4122; }
+.pricingAmount { font-size: 72px; font-weight: 900; letter-spacing: -0.04em; line-height: 1; color: #111; }
+.pricingName { font-size: 18px; font-weight: 700; color: #111; margin-bottom: 8px; }
+.pricingDesc { font-size: 15px; color: #666; margin-bottom: 24px; line-height: 1.6; }
+.pricingFeatures { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px; }
+.pricingFeature { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; color: #444; }
+.check { color: #FF4122; font-weight: 700; flex-shrink: 0; }
+.pricingCta {
+  display: block; text-align: center; background-color: #FF4122; color: #fff;
+  font-size: 15px; font-weight: 700; padding: 14px; border-radius: 12px;
+  transition: background-color 0.2s ease;
+}
+.pricingCta:hover { background-color: #e03519; }
+.pricingContact {
+  background: #fafafa; border: 1px solid #ebebeb; border-radius: 18px; padding: 28px 32px;
+}
+.pricingContactTitle { font-size: 18px; font-weight: 700; color: #111; margin-bottom: 8px; }
+.pricingContactDesc { font-size: 15px; color: #666; line-height: 1.6; margin-bottom: 16px; }
+.pricingContactBtn { font-size: 15px; font-weight: 600; color: #FF4122; transition: opacity 0.2s ease; }
+.pricingContactBtn:hover { opacity: 0.75; }
+
+/* FAQ */
+.faqSection { padding: 80px 0; background: #fafafa; border-top: 1px solid #ebebeb; }
+.faqSection .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+.faqList { border: 1px solid #ebebeb; border-radius: 20px; overflow: hidden; background: #fff; }
+.faqItem { border-bottom: 1px solid #ebebeb; }
+.faqItem:last-child { border-bottom: none; }
+.faqQ {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 26px; font-size: 16px; font-weight: 600; color: #111;
+  cursor: pointer; list-style: none; transition: color 0.2s ease;
+}
+.faqQ:hover { color: #FF4122; }
+.faqQ::-webkit-details-marker { display: none; }
+.faqQ::after { content: '+'; font-size: 20px; font-weight: 300; color: #aaa; transition: transform 0.2s ease; flex-shrink: 0; }
+.faqItem[open] .faqQ::after { transform: rotate(45deg); color: #FF4122; }
+.faqA { padding: 0 26px 20px; font-size: 15px; color: #666; line-height: 1.7; }
+
+/* CTA */
+.ctaSection { padding: 80px 0; background: #fff; border-top: 1px solid #ebebeb; max-width: 1200px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+.ctaBox { background: #fff4f2; border: 1px solid #ffd5cd; border-radius: 24px; padding: 72px 60px; text-align: center; }
+.ctaTitle { font-size: clamp(28px, 4vw, 48px); font-weight: 900; letter-spacing: -0.03em; line-height: 1.1; color: #111; margin-bottom: 36px; margin-top: 16px; }
+.ctaBtn {
+  display: inline-flex; align-items: center;
+  background-color: #FF4122; color: #fff; font-size: 17px; font-weight: 700;
+  padding: 17px 36px; border-radius: 14px; transition: background-color 0.2s ease;
+}
+.ctaBtn:hover { background-color: #e03519; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .heroInner { grid-template-columns: 1fr; gap: 40px; }
+  .heroImage { display: none; }
+  .designRow, .designRowReverse { grid-template-columns: 1fr; direction: ltr; }
+  .benefitsGrid { grid-template-columns: 1fr; }
+  .stepsGrid { grid-template-columns: 1fr; }
+  .logosGrid { grid-template-columns: repeat(4,1fr); }
+}
+@media (max-width: 560px) {
+  .logosGrid { grid-template-columns: repeat(3,1fr); }
+  .ctaBox { padding: 48px 24px; }
+}

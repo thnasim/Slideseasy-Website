@@ -1,0 +1,10 @@
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+.label { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #FF4122; margin-bottom: 16px; }
+.hero { padding: 150px 0 60px; background: #fff; }
+.title { font-size: clamp(36px, 5vw, 60px); font-weight: 900; letter-spacing: -0.04em; line-height: 1.05; color: #111; margin-bottom: 16px; }
+.updated { font-size: 15px; color: #aaa; }
+.content { padding: 0 0 100px; background: #fff; }
+.prose { color: #555; font-size: 17px; line-height: 1.8; }
+.prose h2 { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; color: #111; margin-top: 48px; margin-bottom: 16px; }
+.prose p { margin-bottom: 16px; }
+.prose a { color: #FF4122; font-weight: 600; }
