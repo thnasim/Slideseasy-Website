@@ -1,0 +1,66 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #FF4122;
+  margin-bottom: 16px;
+}
+
+.hero {
+  padding: 160px 0 60px;
+}
+
+.title {
+  font-size: clamp(36px, 5vw, 60px);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.updated {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.content {
+  padding: 0 0 100px;
+}
+
+.prose {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.prose h2 {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-top: 48px;
+  margin-bottom: 16px;
+}
+
+.prose p {
+  margin-bottom: 16px;
+}
+
+.prose a {
+  color: #FF4122;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.prose a:hover {
+  opacity: 0.8;
+}
